@@ -1,3 +1,5 @@
+const BaseURL = 'https://xinaovo.github.io/redirectme/';
+
 function generateLink() {
     var urlInput = '';
     const delayInput = parseInt(document.getElementById('delayInput').value, 10);
@@ -23,6 +25,6 @@ function generateLink() {
     }
 
     const targetEncoded = btoa(urlInput);
-    const redirectUrl = `index.html?target=${targetEncoded}&delay=${delayInput}`;
+    const redirectUrl = `${BaseURL}index.html?target=${targetEncoded}&delay=${delayInput}`;
     resultElement.innerHTML = `RedirectMe Link: <a href="${redirectUrl}" target="_blank">${redirectUrl}</a>`;
 }
