@@ -31,6 +31,7 @@ function main(){
 
     if (targetBase64 && !isNaN(delay)) {
         targetUrl = atob(targetBase64);
+        isLinkValid = true
         delay = checkDelayTime(delay);
         let countdown = delay;
         document.getElementById('parameterStatus').innerHTML = "Parameters are valid."
